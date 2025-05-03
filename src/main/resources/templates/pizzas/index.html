@@ -17,6 +17,7 @@
                             <th>Nome:</th>
                             <th>Descrizione</th>
                             <th>Prezzo:</th>
+                            <th>Dettaglio:</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -24,6 +25,13 @@
                             <td>[[*{nome}]]</td>
                             <td>[[*{descrizione}]]</td>
                             <td>[[*{prezzo}]]€</td>
+                            <td>
+                                <a th:href="@{/pizzas/{id}(id=*{id})}">
+                                    <button class="btn btn-info">
+                                        <strong>Dettaglio</strong>
+                                    </button>
+                                </a>
+                            </td>
                         </tr>
 
                     </tbody>
