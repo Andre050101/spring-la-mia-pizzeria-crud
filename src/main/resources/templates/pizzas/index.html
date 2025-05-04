@@ -21,6 +21,9 @@
 
         </div>
         <hr /> 
+        <div class="mb-3">
+            <a th:href="@{/pizzas/create}" class="me-auto btn btn-info btn-sm"> Add new pizza</a>
+        </div>
         <section class="row">
             <div class="col-12">
                 <table class="table" th:if="${pizze.size() > 0}">
