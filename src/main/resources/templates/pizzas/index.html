@@ -7,7 +7,19 @@
 <body>
     <nav th:replace="~{fragments/navbar :: navbar('pizzas')}"></nav>
     <main class="container">
-        <h1>Pizze:</h1>
+        <div class="d-flex justify-content-between">
+            <h1>Pizze:</h1>
+
+            <form method="get" action="/pizzas" class="mb-4">
+                <div class="input-group">
+                    <input type="text" name="nome" class="form-control" placeholder="Cerca per nome..." 
+                           th:value="${nome}" />
+                    <button class="btn btn-info" type="submit">Cerca</button>
+                    <a th:href="@{/pizzas}" class="btn btn-warning">Reset</a>
+                </div>
+            </form>
+
+        </div>
         <hr /> 
         <section class="row">
             <div class="col-12">
