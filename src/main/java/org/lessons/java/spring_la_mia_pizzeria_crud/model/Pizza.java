@@ -11,6 +11,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Lob;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
 @Entity
@@ -32,7 +33,7 @@ public class Pizza {
     @NotBlank
     private String url_foto;
 
-    @NotBlank
+    @NotNull(message = "Il prezzo è obbligatorio")
     private float prezzo;
 
     public Integer getId() {
