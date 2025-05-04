@@ -33,6 +33,8 @@
                             <th>Descrizione</th>
                             <th>Prezzo:</th>
                             <th>Dettaglio:</th>
+                            <th>Modifica:</th>
+                            <th>Elimina:</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -46,6 +48,21 @@
                                         <strong>Dettaglio</strong>
                                     </button>
                                 </a>
+                            </td>
+                            <td>
+                                <a th:href="@{/pizzas/edit/{id}(id=*{id})}">
+                                    <button class="btn btn-primary">
+                                        <strong>Modifica</strong>
+                                    </button>
+                                </a>
+                            </td>
+                            <td>
+                                <!--Form-->
+                                <form action="#" th:action="@{/pizzas/delete/{id}(id=*{id})}" method="post">
+                                    <button type="submit" class="btn btn-danger">
+                                        <strong>Elimina</strong>
+                                    </button>
+                                </form>
                             </td>
                         </tr>
 
